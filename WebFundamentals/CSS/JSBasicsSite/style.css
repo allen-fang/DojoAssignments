@@ -1,0 +1,103 @@
+/*CSS Reset*/
+
+* {
+	padding: 0px;
+	margin: 0px;
+}
+
+#wrapper {
+	background-color: #15254A;
+	padding: 10px;
+	width: 970px;
+}
+
+a {
+	color: #5BDDDF;
+}
+
+span {
+	color: #666BFF;
+}
+
+/*Header*/
+
+#header {
+	background-color: #C11A29;
+	border-radius: 15px;
+	padding: 20px 10px;
+	margin-bottom: 15px;
+}
+
+h1 {
+	color: #BCBDDC;
+	font-size: 2em
+}
+
+/*navigation*/
+
+#navigation {
+	background-color: #226A79;
+	display: inline-block;
+	vertical-align: top;
+	padding: 15px;
+	border-radius: 20px;
+	font-size: 0.9em;
+	margin-right: 20px;
+}
+
+#navigation ul {
+	padding-left: 20px;
+}
+
+#navigation .inner {
+	list-style-type: none;
+}
+
+#navigation li {
+	color: #B2C9E3;
+}
+
+/*main content*/
+
+#main-content {
+	width: 725px;
+	background-color: #0C1219;
+	color: #B7CCE8;
+	display: inline-block;
+	font-size: 0.85em;
+	padding: 20px 15px 15px;
+	border-radius: 20px;
+}
+
+#main-content h2 {
+	margin-bottom: 10px;
+}
+
+#main-content p {
+	margin-bottom: 10px;
+}
+
+#main-content ul {
+	padding-left: 20px;
+}
+
+#main-content li {
+	margin-bottom: 5px;
+}
+
+/*footer*/
+
+#footer {
+	background-color: #4B525F;
+	padding: 15px;
+	border-radius: 20px;
+	margin-top: 15px;
+	font-size: 0.8em;
+	color: #B7CCE8;
+}
+
+
+
+
+
+
