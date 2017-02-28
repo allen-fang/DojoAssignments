@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			"use strict";
+
+			function numbersOnly(arr) {
+				var newarr = [];
+				for(var i = 0; i < arr.length; i++) {
+					if (typeof arr[i] === "number") {
+						newarr.push(arr[i]);
+					}
+				}
+				return newarr;
+			}
+
+			function numbersOnly2(arr) {
+				for (var i = 0; i < arr.length; i++) {
+					if (typeof arr[i] !== "number") {
+						arr.splice(i, 1);
+						i--;
+					}
+				}
+			}
+
+			var ex = [1, "apple", -3, "orange", 0.5];
+			console.log(numbersOnly(ex));
+
+			var ex2 = [1, "a", 3, "b", 123, 4224, "1241", 12];
+			numbersOnly2(ex2);
+			console.log(ex2);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Disappeaering Ninja</title>
+		<style type="text/css">
+			img {
+				display: inline-block;
+				width: 20%;
+			}
+			button {
+				display:block;
+				margin: 0 auto;
+			}
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+
+				$('img').click(function() {
+					$(this).attr("src","");
+				})
+
+				$('button').click(function() {
+					$('img').attr("src","dojocat.jpg");
+				})
+
+			});
+		</script>
+	</head>
+	<body>
+		<h1>jQuery - Disappeaering Ninja</h1>
+		<img src="dojocat.jpg">
+		<img src="dojocat.jpg">
+		<img src="dojocat.jpg">
+		<img src="dojocat.jpg">
+		<img src="dojocat.jpg">
+		<img src="dojocat.jpg">
+		<img src="dojocat.jpg">
+		<img src="dojocat.jpg">
+		<button>Restore</button>
+	</body>
+</html>

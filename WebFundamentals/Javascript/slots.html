@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			"use strict";
+
+			function slots(quarters, goal) {
+				var winningNum = Math.trunc(Math.random() * 100);
+				var chances = quarters;
+
+				while (chances > 0 ) {
+					var play = Math.trunc(Math.random() * 100);
+					if (chances > goal) { break;}
+					if (play == winningNum) {
+						chances += Math.trunc(Math.random() * 51) + 50;
+					} else {
+						chances--;
+					}
+				}
+
+				return chances;
+			}
+
+			console.log(slots(50, 100));
+		</script>
+	</body>
+</html>

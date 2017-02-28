@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery Demo</title>
+		<style type="text/css">
+			.slide-block {
+			    margin: 3px;
+			    width: 80px;
+			    height: 40px;
+			    display: inline-block;			
+			}
+			.down {
+				background: #de9a44;
+				display: none;
+			}
+			.up {
+				background: red;
+			}
+			.toggle {
+				background: blue;
+			}
+			.fadeIn {
+				background: grey;
+				display: none;
+			}
+			.fadeOut {
+				background: green;
+			}
+			.added {
+				color: blue;
+			}
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				console.log("jQuery loaded.")
+				
+				$('#hide').click(function(){
+					// alert('hello');
+					$('p').hide();
+				})
+
+				$('#show').click(function() {
+					$('p').show();
+				})
+
+				$('#toggle-button').click(function() {
+					$('p').toggle();
+				})
+
+				$('#slide-down').click(function() {
+					$('.down').slideDown();
+				})
+
+				$('#slide-up').click(function() {
+					$('.up').slideUp();
+				})
+
+				$('#slide-toggle').click(function() {
+					$('.toggle').slideToggle();
+				})
+
+				$('#fade-in').click(function() {
+					$('.fadeIn').fadeIn();
+				})
+
+				$('#fade-out').click(function() {
+					$('.fadeOut').fadeOut();
+				})
+
+				$('#add-class').click(function() {
+					$('#add-class').addClass('added');
+				})
+
+				$('#helloworld').click(function() {
+					$('#helloworld').before('<h4>coding dojo</h4>');
+					$('#helloworld').prepend('hello');
+					$('#helloworld').append('world');
+					$('#helloworld').after('<h4>coding dojo</h4>');
+				})
+
+				$('#title').click(function(){
+					alert($(this).html());
+					$(this).text("TESTING");
+				})
+
+				$('input').hover(function() {
+					$(this).val("changed");
+				})
+
+				$('div').click(function() {
+					$('p').attr("style", "color:brown");
+				})
+
+				$('#data').click(function() {
+					$(this).data("test", {first: 16, last: 14});
+					alert("data was " + $(this).data("test").first + " and " + $(this).data("test").last);
+				})
+			});
+		</script>
+	</head>
+	<body>
+		<button id="hide">hide all paragraphs</button>
+		<button id="show">show all paragraphs</button>
+		<button id="toggle-button" ="toggle-button">toggle paragraphs</button>
+		<p id="slide-down">click here to slide down blocks</p>
+		<div class="slide-block down"></div>
+		<div class="slide-block down"></div>
+		<div class="slide-block down"></div>
+		<p id="slide-up">click here to slide up blocks</p>
+		<div class="slide-block up"></div>
+		<div class="slide-block up"></div>
+		<div class="slide-block up"></div>
+		<p id="slide-toggle">click here to slide toggle blocks</p>
+		<div class="slide-block toggle"></div>
+		<div class="slide-block toggle"></div>
+		<div class="slide-block toggle"></div>
+		<p id="fade-in">click here to fade block in</p>
+		<div class="slide-block fadeIn"></div>
+		<div class="slide-block fadeIn"></div>
+		<div class="slide-block fadeIn"></div>
+		<p id="fade-out">click here to fade block out</p>
+		<div class="slide-block fadeOut"></div>
+		<div class="slide-block fadeOut"></div>
+		<div class="slide-block fadeOut"></div>
+		<p id="add-class">click here to add class .added to change this font color to blue</p>
+		<p id="helloworld">Hello World</p>
+		<h1 id="title">JQUERY DEMO</h1>
+		<input type="text" value="this will change" name="">
+		<p id="data">click here for data</p>
+	</body>
+</html>
